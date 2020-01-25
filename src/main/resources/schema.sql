@@ -5,6 +5,7 @@ CREATE TABLE `bookstore_db`.`books` (
   `title` VARCHAR(45) NOT NULL,
   `author` VARCHAR(45) NOT NULL,
   `price` DECIMAL(4,2) NOT NULL,
+  `front_cover` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8

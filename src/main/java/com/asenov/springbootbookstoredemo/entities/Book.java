@@ -1,5 +1,6 @@
 package com.asenov.springbootbookstoredemo.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,4 +23,7 @@ public class Book {
     private String author;
 
     private double price;
+
+    @Column(name="front_cover")
+    private String frontCover;
 }
