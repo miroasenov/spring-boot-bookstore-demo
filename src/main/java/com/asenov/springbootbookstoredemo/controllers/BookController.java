@@ -33,5 +33,15 @@ public class BookController {
         model.addAttribute("book", book);
 
         return "showFrontCover";
-    } 
+    }
+    
+    @GetMapping("/genre/{id}")
+    public String readBooks(Model model, @PathVariable int id){
+
+        List<Book> books = bookRepo.findByGenreId(id);
+
+        model.addAttribute("books", books);
+
+        return "genreBooks";
+    }
 }
