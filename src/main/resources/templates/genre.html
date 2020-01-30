@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>All Books</title>
+ <title>Books By Genre</title>
 </head> 
 <body>
-    <nav><a href="/genres">All Genres</a></nav>
+    <nav><a href="/genres">All Genres</a> | <a href="/">All Books</a></nav>
     <table>
         <tr>
             <th>Id</th>
@@ -19,10 +19,8 @@
             <td th:text="${book.author}"></td>
             <td th:text="${book.genre.name}"></td>
             <td th:text="${book.price}"></td>
-            <td><a th:href="@{'/showFrontCover/' + ${book.id}}">Show Front Cover</a></td>
+            <td><a th:href="@{'/cover/' + ${book.id}}">Show Front Cover</a></td>
         </tr>
     </table>
-
-
 </body>
 </html>

@@ -18,30 +18,30 @@ public class BookController {
     private BookRepository bookRepo;
 
     @GetMapping("/")
-    public String readAll(Model model){
+    public String showAllBooks(Model model){
         
         List<Book> books = bookRepo.findAll();
         model.addAttribute("books", books);
-        return "read";
+        return "books";
     } 
 
-    @GetMapping("/showFrontCover/{id}")
+    @GetMapping("/cover/{id}")
     public String showFrontCover(@PathVariable int id, Model model) {
 
         Book book = bookRepo.getOne(id);
 
         model.addAttribute("book", book);
 
-        return "showFrontCover";
+        return "cover";
     }
     
     @GetMapping("/genre/{id}")
-    public String readBooks(Model model, @PathVariable int id){
+    public String showBooksByGenre(Model model, @PathVariable int id){
 
         List<Book> books = bookRepo.findByGenreId(id);
 
         model.addAttribute("books", books);
 
-        return "genreBooks";
+        return "genre";
     }
 }

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Front Cover</title>
+</head> 
+<body>
+    <nav><a th:href="@{'/'}">Back to Books List</a></nav>
+
+    <div th:object="${book}"><img style="width: 350px;"  th:src="@{'/media/' + ${book.frontCover}}"></div> 
+</body>
+</html>

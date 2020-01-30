@@ -17,10 +17,10 @@ public class GenreController {
     private GenreRepository genreRepo;
 
     @GetMapping("/genres")
-    public String showGenres(Model model){
+    public String showAllGenres(Model model){
 
         List<Genre> genres = genreRepo.findAll();
         model.addAttribute("genres", genres);
-        return "showGenres";
+        return "genres";
     }
 }

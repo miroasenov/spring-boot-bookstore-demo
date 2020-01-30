@@ -19,7 +19,7 @@
             <td th:text="${book.author}"></td>
             <td th:text="${book.genre.name}"></td>
             <td th:text="${book.price}"></td>
-            <td><a th:href="@{'/showFrontCover/' + ${book.id}}">Show Front Cover</a></td>
+            <td><a th:href="@{'/cover/' + ${book.id}}">Show Front Cover</a></td>
         </tr>
     </table>
 
